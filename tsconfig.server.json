@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "ESNext",
+    "outDir": "server/dist",
+    "jsx": "preserve"
+  },
+  "include": ["server"]
+}
