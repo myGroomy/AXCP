@@ -1,0 +1,15 @@
+node_modules/
+dist/
+server/dist/
+*.db
+*.db-journal
+.env
+.env.local
+.env.production
+src-tauri/target/
+.DS_Store
+*.log
+coverage/
+test-results/
+.git
+.gitignore

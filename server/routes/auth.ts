@@ -79,8 +79,8 @@ authRouter.post('/refresh', async (req, res, next) => {
     );
 
     res.json({ success: true, data: { token } });
-  } catch {
-    throw new AppError('UNAUTHORIZED', 'Invalid refresh token', 401);
+  } catch (err) {
+    next(new AppError('UNAUTHORIZED', 'Invalid refresh token', 401));
   }
 });
 

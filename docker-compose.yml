@@ -1,0 +1,23 @@
+services:
+  axcp:
+    build: .
+    ports:
+      - "5173:5173"
+      - "3001:3001"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - DATABASE_URL=file:./prisma/dev.db
+      - JWT_SECRET=docker-dev-secret-change-me
+      - CORS_ORIGIN=http://localhost:5173
+      - PORT=3001
+    command: >
+      sh -c "
+        npx prisma generate &&
+        npx prisma db push &&
+        npm run db:seed &&
+        npx vite --host --port 5173 &
+        npm run dev:server &
+        wait
+      "
