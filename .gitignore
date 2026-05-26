@@ -4,6 +4,7 @@ server/dist/
 *.db
 *.db-journal
 .env
+.env.example
 .env.local
 .env.production
 src-tauri/target/
@@ -11,3 +12,4 @@ src-tauri/target/
 *.log
 coverage/
 test-results/
+*.md
