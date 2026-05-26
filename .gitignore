@@ -12,4 +12,8 @@ src-tauri/target/
 *.log
 coverage/
 test-results/
-*.md
+AGENTS.md
+ARCHITECTURE.md
+BRD.md
+PRD.md
+SRS.md
